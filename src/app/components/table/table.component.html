@@ -1,0 +1,27 @@
+<div >
+  <p-table [value]="pokemonList" [paginator]="true"
+           [rowsPerPageOptions]="[5, 10]"
+           [tableStyle]="{'min-width': '50rem'}"
+           currentPageReportTemplate="Showing  entries">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Name</th>
+        <th>Pokemon</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-pokemon  let-rowIndex="rowIndex">
+      <tr>
+        <td (click)="idPokemon(rowIndex + 1)">{{rowIndex + 1}}</td>
+        <td>{{pokemon.name}}</td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorleft">
+      <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+      <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+    </ng-template>
+  </p-table>
+</div>
+
+

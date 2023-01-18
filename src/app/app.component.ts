@@ -1,25 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiPokemonService } from './services/api-pokemon.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements  OnInit{
-  title = 'pokemonV2';
-  products: any[] = [];
+export class AppComponent {
 
-  constructor( private apiPokemon: ApiPokemonService ) {
-  }
-  ngOnInit() {
-    this.getPokemons()
-  }
 
-  getPokemons() {
-    this.apiPokemon.getListAllPokemon().subscribe((e) => {
-      console.log(e)
-    })
+  constructor() {
   }
 
 }

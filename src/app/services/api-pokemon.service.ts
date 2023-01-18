@@ -20,4 +20,7 @@ export class ApiPokemonService {
     return this.getInfoApi('pokemon/?limit=1279');
   }
 
+  getOnePokemon(id: number) {
+    return this.getInfoApi(`pokemon/${id}`)
+  }
 }
