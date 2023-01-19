@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-pokemon',
-  templateUrl: './pokemon.component.html',
-  styleUrls: ['./pokemon.component.scss']
+  templateUrl: './pokemon.component.html'
 })
-export class PokemonComponent {
+export class PokemonComponent implements OnInit, OnChanges{
+  @Input() pokemonInfo: any;
 
+  ngOnInit() {
+
+  }
+
+  ngOnChanges() {
+    console.log(this.pokemonInfo)
+  }
 }

@@ -3,12 +3,12 @@ import { ApiPokemonService } from '../../services/api-pokemon.service';
 
 @Component({
   selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  templateUrl: './table.component.html'
 })
 export class TableComponent implements  OnInit, AfterViewInit{
 
   public pokemonList: any[] = [];
+  public pokemonInfo: any;
 
   constructor(
     private apiPokemon: ApiPokemonService
@@ -25,13 +25,13 @@ export class TableComponent implements  OnInit, AfterViewInit{
 
   getListPokemon() {
     this.apiPokemon.getListAllPokemon().subscribe((res: any) => {
-      this.pokemonList = res.results.slice(0,10);
+      this.pokemonList = res.results
     })
   }
 
   idPokemon(idPokemon: number) {
     this.apiPokemon.getOnePokemon(idPokemon)
-      .subscribe((pokemon) => console.log(pokemon))
+      .subscribe((pokemon) => this.pokemonInfo = pokemon)
   }
 
 }

@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { TableComponent } from './components/table/table.component';
 import { StatsComponent } from './components/stats/stats.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 
 
@@ -18,7 +19,8 @@ import { StatsComponent } from './components/stats/stats.component';
     HomeComponent,
     PokemonComponent,
     TableComponent,
-    StatsComponent
+    StatsComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
