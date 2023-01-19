@@ -1,7 +1,10 @@
 .pokemon_content {
   margin: 2rem .75rem 0 .75rem;
   display: grid;
-  grid-template-columns: 60% 30%;
+  grid-template-columns: 40% 30%;
   column-gap: 30px;
   justify-content: center;
+  @include break('x-large') {
+    grid-template-columns: 1fr;
+  }
 }

@@ -9,6 +9,7 @@ export class TableComponent implements  OnInit, AfterViewInit{
 
   public pokemonList: any[] = [];
   public pokemonInfo: any;
+  public displayResponsive: boolean = false;
 
   constructor(
     private apiPokemon: ApiPokemonService
@@ -25,13 +26,17 @@ export class TableComponent implements  OnInit, AfterViewInit{
 
   getListPokemon() {
     this.apiPokemon.getListAllPokemon().subscribe((res: any) => {
-      this.pokemonList = res.results
+      this.pokemonList = res
     })
   }
 
   idPokemon(idPokemon: number) {
+    this.displayResponsive = false;
     this.apiPokemon.getOnePokemon(idPokemon)
-      .subscribe((pokemon) => this.pokemonInfo = pokemon)
+      .subscribe((pokemon) => {
+        this.pokemonInfo = pokemon;
+        this.displayResponsive = true;
+      })
   }
 
 }

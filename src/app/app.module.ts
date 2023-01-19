@@ -10,6 +10,7 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { TableComponent } from './components/table/table.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 
 
@@ -20,7 +21,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     PokemonComponent,
     TableComponent,
     StatsComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

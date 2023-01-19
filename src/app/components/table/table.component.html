@@ -1,7 +1,9 @@
 <div class="pokemon_content">
-  <p-table [value]="pokemonList" [paginator]="true"
+  <p-table [value]="pokemonList"
+           [paginator]="true"
+           responsiveLayout="stack"
+           scrollHeight="flex"
            [rows]="5"
-           [tableStyle]="{'min-width': '50rem'}"
            currentPageReportTemplate="Showing  entries">
     <ng-template pTemplate="header">
       <tr>
@@ -23,7 +25,8 @@
     </ng-template>
   </p-table>
 
-  <app-pokemon [pokemonInfo]="pokemonInfo" *ngIf="pokemonInfo"></app-pokemon>
+  <app-pokemon class="pokemon-card_container" [pokemonInfo]="pokemonInfo" *ngIf="pokemonInfo"></app-pokemon>
+  <app-dialog class="pokemon-dialog_container" [pokemonInfo]="pokemonInfo" [displayResponsive]="displayResponsive"></app-dialog>
 </div>
 
 

@@ -1,0 +1,6 @@
+.pokemon-dialog_container {
+  display: none;
+  @include break('x-large') {
+    display: block;
+  }
+}

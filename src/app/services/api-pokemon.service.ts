@@ -23,7 +23,7 @@ export class ApiPokemonService {
   getListAllPokemon() {
     return this.getInfoApi('pokemon/?limit=1279')
       .pipe(map(res =>{
-        const response = {...res};
+        const response = [...res.results];
         const order = res.results.sort((a: any, b: any) => a.name.localeCompare(b.name))
         const alphabet = order.reduce((accum: any, current: any) => {
           const letter = current.name.slice(0, 1);
@@ -33,7 +33,7 @@ export class ApiPokemonService {
             accum[letter] = 1
           }
           return accum
-        }, {})
+        }, {});
         this.emitAlphabetPokemon.next(alphabet)
         return response;
       }));

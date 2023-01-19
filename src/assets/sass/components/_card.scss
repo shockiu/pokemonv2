@@ -1,3 +1,8 @@
+.pokemon-card_container {
+  @include break('x-large'){
+    display: none;
+  }
+}
 .pokemon_card {
   display: flex;
   justify-content: center;

@@ -6,12 +6,12 @@ import { Component, Input, OnInit, OnChanges } from '@angular/core';
 })
 export class PokemonComponent implements OnInit, OnChanges{
   @Input() pokemonInfo: any;
+  showCard = true;
 
   ngOnInit() {
 
   }
 
   ngOnChanges() {
-    console.log(this.pokemonInfo)
   }
 }
