@@ -1,0 +1,7 @@
+.list_alphabet {
+  margin: 4rem;
+}
+.p-listbox-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+}

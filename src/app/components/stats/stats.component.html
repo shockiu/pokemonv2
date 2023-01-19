@@ -1,1 +1,10 @@
-<p>stats works!</p>
+<div class="list_alphabet">
+  <h3>Pokemons  que comienzan con cada letra del abecedario</h3>
+  <p-listbox [options]="alphabetArr" optionLabel="name"  *ngIf="alphabetArr.length > 0">
+    <ng-template  let-letter pTemplate="item">
+      <div>
+        {{letter| uppercase}}: {{ alphabet[letter] }}
+      </div>
+    </ng-template>
+  </p-listbox>
+</div>

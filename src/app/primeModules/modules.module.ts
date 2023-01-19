@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { PaginatorModule } from 'primeng/paginator';
 import {CardModule} from 'primeng/card';
 import {ToolbarModule} from 'primeng/toolbar';
-
+import { ListboxModule } from 'primeng/listbox';
 
 @NgModule({
   declarations: [],
@@ -13,7 +13,8 @@ import {ToolbarModule} from 'primeng/toolbar';
     ButtonModule,
     PaginatorModule,
     CardModule,
-    ToolbarModule
+    ToolbarModule,
+    ListboxModule
   ]
 })
 export class NgPrimeModule { }

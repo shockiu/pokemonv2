@@ -1,6 +1,6 @@
 <div class="pokemon_content">
   <p-table [value]="pokemonList" [paginator]="true"
-           [rowsPerPageOptions]="[5, 10]"
+           [rows]="5"
            [tableStyle]="{'min-width': '50rem'}"
            currentPageReportTemplate="Showing  entries">
     <ng-template pTemplate="header">
